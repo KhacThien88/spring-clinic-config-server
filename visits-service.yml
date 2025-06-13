@@ -1,0 +1,14 @@
+﻿spring:
+  config:
+    activate:
+      on-profile: default
+server:
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://petclinic-discovery-server-service:8761/eureka/
+management:
+  zipkin:
+    tracing:
+      endpoint: http://tracing-server:9411/api/v2/spans
