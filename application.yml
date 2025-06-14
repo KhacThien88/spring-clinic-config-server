@@ -53,6 +53,7 @@ management:
     web:
       exposure:
         include: '*'
+        base-path: /actuator
   metrics:
     export:
       prometheus:
@@ -62,7 +63,7 @@ management:
       probability: 1
   zipkin:
     tracing:
-      endpoint: http://tracing-server-service:9411/api/v2/spans
+      endpoint: http://tracing-server-service:9411/api/v2/spans 
 
 # Chaos Engineering
 ---
