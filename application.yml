@@ -13,7 +13,7 @@ spring:
       schema-locations: classpath*:db/hsqldb/schema.sql
       data-locations: classpath*:db/hsqldb/data.sql
   zipkin:
-    baseUrl: http://tracing-server-service.petclinic-review.svc.cluster.local:9411/
+    baseUrl: http://tracing-server-service:9411/api/v2/spans
   sleuth:
     sampler:
       probability: 1.0
@@ -62,7 +62,7 @@ management:
       probability: 1
   zipkin:
     tracing:
-      endpoint: http://tracing-server-review.khacthienit.click/api/v2/spans
+      endpoint: http://tracing-server-service:9411/api/v2/spans
 
 # Chaos Engineering
 ---
